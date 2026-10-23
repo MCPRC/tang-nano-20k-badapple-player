@@ -5,6 +5,11 @@
 !/firmware/
 !/media/
 !/stream/
+!/tools/
+
+/tools/*
+!/tools/check_fat32_bav.py
+!/tools/test_check_fat32_bav.py
 
 /firmware/*
 !/firmware/stream.fs

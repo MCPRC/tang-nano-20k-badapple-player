@@ -6,8 +6,10 @@ Neither that video nor its converted `BADAPPLE.BAV` is included in this
 repository. Use media that you are allowed to copy and process.
 
 `BADAPPLE.BAV` is a sector-aligned, fixed-record file intended for simple
-sequential reading from a FAT32 TF card by the Tang Nano 20K. It contains
-6,570 video frames (219.0 seconds) at 30 frames/s and synchronized mono PCM.
+sequential reading from a prepared TF card by the Tang Nano 20K. The verified
+test conversion contains 6,570 video frames (219.0 seconds) at 30 frames/s
+and synchronized mono PCM; other input videos produce different frame counts
+and durations.
 The converter and verifier are included so the file can be regenerated and
 checked without a video decoder in the FPGA.
 
@@ -75,6 +77,7 @@ uses exactly the samples corresponding to the 219.0-second video.
 
 For an 800×480 RGB LCD, each source pixel can be displayed as a 2×2 block,
 producing a 640×480 picture centered with 80-pixel black margins on each side.
-The FPGA only needs an SD/FAT reader, a frame buffer or suitable stream
-scheduler, a 1-bit pixel lookup, and 8-bit PCM output; no H.264/AAC decoder is
-needed on the FPGA.
+The current FPGA player reads consecutive physical SD sectors from a fixed
+start LBA; it does not parse FAT at playback time. It uses frame buffers,
+1-bit pixel lookup, and 8-bit PCM output; no H.264/AAC decoder is needed on
+the FPGA.
