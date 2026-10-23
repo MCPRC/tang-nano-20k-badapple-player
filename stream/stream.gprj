@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <FileList>
+        <File path="src/gowin_rpll/video_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/sd_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_reader.sv" type="file.verilog" enable="1"/>
+        <File path="src/sdcmd_ctrl.sv" type="file.verilog" enable="1"/>
+        <File path="src/sd_sector_bridge.v" type="file.verilog" enable="1"/>
+        <File path="src/vga_timing.v" type="file.verilog" enable="1"/>
+        <File path="src/bav_sector_parser.v" type="file.verilog" enable="1"/>
+        <File path="src/bav_av_engine.v" type="file.verilog" enable="1"/>
+        <File path="src/play_button.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/av_sd.cst" type="file.cst" enable="1"/>
+        <File path="src/av_sd.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>
